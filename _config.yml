@@ -1,0 +1,4 @@
+name: "A. Sharif"
+markdown: redcarpet
+pygments: true
+permalink: /post/:title

@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Test."
+date:   2014-04-01 22:02:30
+tags: 	initial foo
+---
+
+Test code syntax highlighting
+
+{% highlight java %}
+class BlogTest {
+	public void getFoo() {
+		
+	}
+}
+
+{% endhighlight %}
+
+Check out the [Busypeople Repository][github] - just link testing.
+
+[github]:    http://www.github.com/busypeoples
