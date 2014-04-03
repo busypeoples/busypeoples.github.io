@@ -1,9 +1,15 @@
 ---
 layout: post
-title:  "Using $q to abstarct complexity in angularJS"
+title:  "Using $q to abstact complexity in angularJS"
 date:   2014-04-03 22:02:30
 tags:	angularJS, javascript
 ---
+
+## The promise concept in javascript
+
+## The promise concept in angular
+
+## Using $q to handle multiple requests
 
 
 
