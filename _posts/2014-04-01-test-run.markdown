@@ -10,10 +10,12 @@ tags:	angularJS, javascript
 In general the promise concept tries to solve the problems when dealing with asynchronous events. One workaround has always been to use callbacks to handle async events. While callbacks solve the problem at first glance, they introduce other problems including having callbacks call other callback as soon as more than one asynchronous event is needed. Error handling becomes complex as every event that might be asynchronous would have to be handled explicitly, losing the ability to have a try/catch block. A promise in short is the future result of an operation, a placeholder for a successful result or an error with an explanation why the error happened.
 
 ### The promise concept in angular
+AngularJS makes use of promises in multiple parts of the framework, including $http and $timeout. AngularJS has its own $q, which is a minimalistic implementation of the Q library. A similair approach to the jqlite implementation whichs offers a subset of the jQuery library. The only difference here is that the framework will use jQuery incase jQuery is loaded before angularJs.
 
 
+### Using $q to handle multiple requests
 
-## Using $q to handle multiple requests
+AngularJS with its might dependency injection makes it too easy to rely on $scope. When working with controllers one simply injects $scope and then heavily uses $watch to trigger actions as soon as certain collections or properites or objects change. Complexity arises as soon as the controller relies on multiple asynchronous events. Imagine one might need different rest calls to resolve and a service needs to have all data loaded before it can return a certain result needed inside the view. Things become overly complicated. Having multiple watchers including different ifs and returns in multiple methods. The controller becomes messy and hard to maintain. Logic might be spread all over the place.
 
 
 
