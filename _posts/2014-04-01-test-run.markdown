@@ -5,11 +5,16 @@ date:   2014-04-03 22:02:30
 tags:	angularJS, javascript
 ---
 
-## The promise concept in javascript
+### The promise concept in javascript
 
-## The promise concept in angular
+In general the promise concept tries to solve the problems when dealing with asynchronous events. One workaround has always been to use callbacks to handle async events. While callbacks solve the problem at first glance, they introduce other problems including having callbacks call other callback as soon as more than one asynchronous event is needed. Error handling becomes complex as every event that might be asynchronous would have to be handled explicitly, losing the ability to have a try/catch block. A promise in short is the future result of an operation, a placeholder for a successful result or an error with an explanation why the error happened.
+
+### The promise concept in angular
+
+
 
 ## Using $q to handle multiple requests
+
 
 
 
