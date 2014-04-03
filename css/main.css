@@ -14,12 +14,19 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
+  font: 14px Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-size: 140%:
+}
+
+h2 {
+  font-size: 120%;
+}
+
+h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 { margin-bottom: 1em; }
@@ -46,7 +53,7 @@ a:visited { color: #888; }
 .posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+  font-size: 100%;
 }
 
 /*****************************************************************************/
@@ -58,7 +65,8 @@ a:visited { color: #888; }
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
+  width: 60%;
+  min-width: 42em;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
@@ -95,7 +103,7 @@ a:visited { color: #888; }
 }
 
 .footer {
-  font-size: 80%;
+  font-size: 100%;
   color: #666;
   border-top: 4px solid #eee;
   margin-top: 2em;
@@ -108,7 +116,12 @@ a:visited { color: #888; }
 }
 
 .footer .contact a {
-  color: #8085C1;
+  color: #4099ff;
+  text-decoration: none;
+}
+
+.footer .contact a:hover {
+  text-decoration: underline;
 }
 
 .footer .rss {
