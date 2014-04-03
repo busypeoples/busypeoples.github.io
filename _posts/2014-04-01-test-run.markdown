@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Test."
-date:   2014-04-01 22:02:30
+title:  "Using $q to abstarct complexity in angularJS"
+date:   2014-04-03 22:02:30
+tags:	angularJS, javascript
 ---
 
-Test code syntax highlighting
 
-```java
+
+```javascript
 class BlogTest {
 	public void getFoo() {
 		
