@@ -2,17 +2,16 @@
 layout: post
 title:  "Partial Application And Currying In Javascript"
 date:   2014-05-03 10:00:00
-tags:	javascript functional
+tags:	javascript, functional
 published: true
 ---
 
 ## Introduction
 
 The following article should highlight the difference between partial application and currying.
-Sometimes there is a confusion between the two, as currying could be used to for partial application.
 
 ## Partial Application
-In short a partial function application expects a function and returns the same function but with fewer arguments, as those have been bound to the function.
+In short a partial function application expects a function and returns the same function with fewer arguments by binding pre defined arguments to the function.
 Take a look at the following example:
 
 
@@ -105,7 +104,7 @@ sumUpTheThreeMinusA(2);
 
 ## Currying
 
-Currying essentially solves the problem of dealing with functions that can only accept a single parameter and creating a multiple arguments functions via composition.
+Currying creates multi parameter functions by composing single parameter functions.
 
 Take a look at the following:
 
@@ -132,9 +131,6 @@ function sumUpTheThreeMinusA(b, c) {
     return sumUpTheThree(1, b, c);
 }
 ```
-
-But we can use currying to even a create partial application.
-This might make sense in some situations.
 
 ### Custom Function
 
@@ -173,7 +169,7 @@ curryTestC(3);
 
 ### Currying With Wu.js
 
-Finally we will have a look at how it is implemented in wu.js. Of course a couple of libraries have implemented currying.
+Finally we will have a look at how to achieve currying with wu.js.
 Wu.js offers the _autoCurry()_ method that automatically adds currying to a given function, which is more or less what we want.
 
 

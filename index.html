@@ -21,7 +21,7 @@ title: "A. Sharif"
 		<p>
           <i class="icon-calendar"></i> {{ post.date | date: "%B %e, %Y" }} 
         	{% if post.tags %}      
-		  | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="/tags/{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>  {% if forloop.last != true %} {% endif %} {% endfor %}		            
+		  | <i class="icon-tags"></i>{% for tag in post.tags %} <span rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></span>  {% if forloop.last != true %} {% endif %} {% endfor %}
         	{% endif %}
         </p>
         <p><a href="{{ post.url }}">Read more</a></p>
