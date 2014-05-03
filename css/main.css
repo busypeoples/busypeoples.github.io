@@ -23,11 +23,14 @@ h1 {
 }
 
 h2 {
-  font-size: 120%;
+	font-size: 120%;
+	margin-top: 1em;
 }
 
 h3, h4, h5, h6 {
-  font-size: 100%; }
+	font-size: 100%;
+	margin-top: 1em;
+}
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -63,7 +66,7 @@ a:visited { color: #444; }
 /*****************************************************************************/
 
 .site {
-  font-size: 115%;
+  font-size: 130%;
   text-align: justify;
   width: 60%;
   min-width: 42em;
@@ -143,8 +146,9 @@ a:visited { color: #444; }
 /* standard */
 .post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+  background-color: #efefef;
+  padding: 0.4em .4em;
+  margin: 1em 0;
 }
 
 .post ul, .post ol {
@@ -153,7 +157,7 @@ a:visited { color: #444; }
 
 .post code {
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #efefef;
   padding: 0 .2em;
 }
 

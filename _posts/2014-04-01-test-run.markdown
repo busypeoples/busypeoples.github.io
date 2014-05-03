@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Using $q to abstact complexity in angularJS"
-date:   2014-04-03 22:02:30
+date:   2014-04-20 22:02:30
 tags:	angularJS, javascript
+published : false
 ---
 
 ### The promise concept in javascript
