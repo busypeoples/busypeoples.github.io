@@ -9,10 +9,10 @@ published: true
 ## Introduction
 
 The following article should highlight the difference between partial application and currying.
-Sometimes there is a confusion between the two, as they can be used in similar ways and solve similar problems.
+Sometimes there is a confusion between the two, as currying could be used to for partial application.
 
 ## Partial Application
-In short a partial application is all about pre defining parameters when working with a multi parameter function and receiving a new function in return.
+In short a partial function application expects a function and returns the same function but with fewer arguments, as those have been bound to the function.
 Take a look at the following example:
 
 
@@ -105,14 +105,16 @@ sumUpTheThreeMinusA(2);
 
 ## Currying
 
-Currying essentially solves the problem of having functions accepting single parameters when really needing multi parameter functions.
+Currying essentially solves the problem of dealing with functions that can only accept a single parameter and creating a multiple arguments functions via composition.
 
 Take a look at the following:
 
 ```javascript
-function addUp(a) {
+function sumUpTheThree(a) {
 	return function(b) {
-		return a + b;
+		return function(c) {
+			return a + b + c;
+		}
 	}
 }
 ```
@@ -120,20 +122,19 @@ function addUp(a) {
 and then:
 
 ```javascript
-addUp(1)(2);
+sumUpTheThree(1)(2)(3);
 ```
 
-In javascript we can simply write this:
+In javascript we simply wrote this:
 
 ```javascript
-function addUp(a, b) {
-	return a + b;
+function sumUpTheThreeMinusA(b, c) {
+    return sumUpTheThree(1, b, c);
 }
 ```
 
-But we can use currying to even create partial application.
+But we can use currying to even a create partial application.
 This might make sense in some situations.
-
 
 ### Custom Function
 
@@ -174,7 +175,6 @@ curryTestC(3);
 
 Finally we will have a look at how it is implemented in wu.js. Of course a couple of libraries have implemented currying.
 Wu.js offers the _autoCurry()_ method that automatically adds currying to a given function, which is more or less what we want.
-All of the above will work.
 
 
 ```javascript
@@ -189,6 +189,8 @@ curryTest(1)(2, 3);
 
 curryTest(1, 2, 3);
 ```
+
+All of the above will work.
 
 ## Round Up
 
