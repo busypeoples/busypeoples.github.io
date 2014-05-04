@@ -127,8 +127,8 @@ sumUpTheThree(1)(2)(3);
 In javascript we simply wrote this:
 
 ```javascript
-function sumUpTheThreeMinusA(b, c) {
-    return sumUpTheThree(1, b, c);
+function sumUpTheThree(a, b, c) {
+    return a + b + c;
 }
 ```
 
