@@ -5,7 +5,7 @@ date:   2014-06-02 21:30:30
 tags:   AngularJS, Javascript, Unit Tests, Karma, Jasmine
 ---
 
-The following post will asume prior knowledge of how to set up [karma](http://karma-runner.github.io/0.12/index.html) and write tests with [Jasmine](http://jasmine.github.io/).
+The following post will assume prior knowledge of how to set up [karma](http://karma-runner.github.io/0.12/index.html) and write tests with [Jasmine](http://jasmine.github.io/).
 This is just a short introduction into getting started with writing tests for AngularJS services. 
 AngularJS offers multiple ways for creating a [provider](https://docs.angularjs.org/guide/providers).
 Depending on what the service class should accomplish one can choose between a service, factory or provider recipe. If no configuration or new instance is needed than a service provider should do the job.
@@ -17,7 +17,7 @@ We have no dependencies, we just want to test the service.
 
 <p><iframe style="border: 1px solid #999; width: 100%; height: 240px; background-color: #fff;" src="http://embed.plnkr.co/A0Q8FiibMwEMr1qoxm31/script.js" height="240" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 	
-The first test was to verify that the service was laoded properly and that calling the getData method returned the correct string.
+The first test was to verify that the service was loaded properly and that calling the getData method returned the correct string.
 The same would work if the service was an angular.service or angular.provider.
 
 Now what if the service needed to communicate with a backend server using $http? Service gets $http injected via AngularJS dependency injection.
@@ -31,7 +31,7 @@ First the extended service class.
 <p><iframe style="border: 1px solid #999; width: 100%; height: 300px; background-color: #fff;" src="http://embed.plnkr.co/E4Snya7H3CMK4sQwrlqJ/script.js" height="300" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 	
 
-And the accomponying tests. We can define callbacks when a certain expected call happens, even verify that no outstanding expectations or outstanding requests exist. This is possible because httpBackend gets injected via the Angular DI.
+And the accompanying tests. We can define callbacks when a certain expected call happens, even verify that no outstanding expectations or outstanding requests exist. This is possible because httpBackend gets injected via the Angular DI.
 Due to the fact we can return any values we want and we really only test the service class and not the dependencies.
 
 <p><iframe style="border: 1px solid #999; width: 100%; height: 400px; background-color: #fff;" src="http://embed.plnkr.co/E4Snya7H3CMK4sQwrlqJ/test.js" height="160" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
