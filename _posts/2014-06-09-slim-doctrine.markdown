@@ -232,7 +232,7 @@ The User Resource should implement all relevant methods including _POST_ and _DE
 
 ###Setting up the index.php file
 
-First we will need to add the vendor autoload file in case you are using composer else this depends how autoloading is handled in your setup.
+First we will need to add the vendor autoload file in case you are using composer else this part depends on how autoloading is handled in your setup.
 
 ```php
 <?php
@@ -277,7 +277,7 @@ $app->delete('/users/:id', function($id = null) use ($userResource) {
 $app->run();
 ```
 
-This is all it needs actually to have a Users Resource up and running that handles creating, updating, deleting and retrieving a specific resource.
+This is all it actually needs to have a Users Resource up and running that handles creating, updating, deleting and retrieving a specific resource.
 
 As a tip: one might consider adding another level of abstraction when dealing with multiple resources.
 Instead of having to explicitly define routes for every possible resource an alternative would be to add a resource factory that returns the correct

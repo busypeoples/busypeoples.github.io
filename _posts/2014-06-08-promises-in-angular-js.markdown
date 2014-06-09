@@ -3,7 +3,7 @@ layout: post
 title:  "Promises in AngularJS"
 date:   2014-06-08 12:00:00
 tags:   AngularJS, Javascript, Unit Tests, Karma, Jasmine
-published: true
+published: false
 ---
 
 ###The promise concept in javascript
