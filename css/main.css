@@ -159,6 +159,7 @@ a:visited { color: #444; }
   border: 1px solid #ddd;
   background-color: #efefef;
   padding: 0 .2em;
+  font-size: 90%;
 }
 
 .post pre code {
