@@ -149,6 +149,8 @@ a:visited { color: #444; }
   background-color: #efefef;
   padding: 0.4em .4em;
   margin: 1em 0;
+  overflow-x: auto ;
+  overflow-y: hidden;
 }
 
 .post ul, .post ol {
