@@ -476,7 +476,7 @@ The new data set only consists of two objects meaning that we should also be abl
 The wait time has been set to 2000ms this time, just to make sure everything is finished when we assert the expectations.
 
 ###Round up
-This post should be an introductory into testing D3 visuals with Jasmine.
+This post should be an introductory in testing D3 visuals with Jasmine.
 There might be other tools that do a better job at testing the visuals, it is highly advised to search for more information
 on D3 and testing or simply experiment with the possibilities and adapt what works best.
 
