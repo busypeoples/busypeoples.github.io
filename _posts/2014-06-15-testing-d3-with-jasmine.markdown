@@ -12,8 +12,7 @@ Everyone who works with javascript and data visualization has to at some point c
 
 Or to quote the documentation: _"D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. For example, you can use D3 to generate an HTML table from an array of numbers. Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction."_
 
-D3 offers the possibility to quickly create complex visualizations and handles complex or large data without any problems.
-The demos on the website present quick transformations and calculation involving very large sets of data.
+The [demos on the website](https://github.com/mbostock/d3/wiki/Gallery) present quick transformations and calculation involving very large sets of data.
 While working with D3 is very well documented, there does not seem to be too much information about testing the generated elements.
 
 We will actually only need a very basic configuration to get and up ready with testing D3.js data visualizations.
