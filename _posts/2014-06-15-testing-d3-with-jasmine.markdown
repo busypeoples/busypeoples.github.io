@@ -20,7 +20,7 @@ We will actually only need a very basic configuration to get and up ready with t
 
 This post will assume previous knowledge of how to work with D3.js and basic api experience, as we will be focusing on the testing side of things.
 
-We will be writing a small bar chart, heavily influenced by the basic d3 example on the website itself and along the way add tests or rather try to see what we can really
+We will be writing a basic bar chart and along the way add tests or rather try to see what we can really
 test with **Jasmine** and what we might no be able to verify.
 
 ###Testing the SVG
@@ -34,7 +34,7 @@ var svg = d3.select('body').append('svg')
              .attr("transform", "translate("0, 0")");
 ```
 
-This code will not produce result at first look but if you inspect the dom you will see that the svg element has been created:
+This code will not produce any visible results but if you inspect the dom you will see that the svg element has been created:
 
 ```html
 <svg height="500" width="500">
@@ -61,8 +61,8 @@ function barChart() {
 }
 ```
 
-We will simply wrap the previous SVG creation code into a render method. This will enable us to call the render method before every test
-and also enables to remove the SVG after the test has run.
+We will simply wrap the previous SVG creation code into a _render_ method. This will enable us to call the _render_ method before every test
+and also enables us to remove the SVG after the test has run.
 
 Writing the first tests is easy. We can't test too much at this point, but we can definitely verify if the SVG has been created and if it contains the correct
 height and width dimensions.
@@ -105,7 +105,7 @@ We are able to test a very basic render method already.
 
 ###Testing the data
 We want to create a basic bar chart, so we will work with simple data objects containing a month and a value for that month.
-For example our data might look like this: _{date : '2014-01', value : 100 }_
+For example our data might look like this: _{ date : '2014-01', value : 100 }_
 
 First let us add a possibility to set data via simple setter/getter :
 
@@ -125,7 +125,7 @@ function barChart() {
 	}
 ```
 
-And we can simply test it:
+And we can simply test the setter and getter:
 
 ```javascript
 describe('Test D3.js with jasmine ', function() {
@@ -196,7 +196,7 @@ function barChart() {
     // etc.
 ```
 
-This code will create the bars according to the given data, we still do not have any axis, but for testing the bars we can already
+This code will create the bars according to the given data (we still do not have any axis), but for testing the bars we can already
 add a new set of tests.
 
 ```javascript
@@ -234,7 +234,7 @@ function getBars() {
 
 ```
 
-Next, we will add the x and a y axis.
+Next, we will add the x and y axis.
 
 ```javascript
 that.addAxis = function() {
@@ -295,13 +295,15 @@ The bar chart already renders correctly upon given the correct set of data.
 Further all tests should be up and running and passing successfully.
 
 Finally we will also try to build some transitions and also test them.
-Jasmine offers helpful methods for async operations like _waitFor_ and _wait_ and _runs_.
-We will use _waits_ method to delay the test being executed. By defining _waits(1000)_ and wrapping the expected result inside the _runs_ method
- we can make sure that the transition has already ended. For more information on [asynchronous specs in jasmine](https://github.com/pivotal/jasmine/wiki/Asynchronous-specs)
-In our example implementation we defined a delay time 500ms, for the test we will set 1000ms.
+Jasmine offers helpful methods for async operations like _waitFor_, _wait_ and _runs_.
+
+We will use the _waits_ method to delay the test being executed. By defining _waits(1000)_ and wrapping the expected result inside the _runs_ method
+ we can make sure that the transition has already ended. Also see the documentation for more information on [asynchronous specs in jasmine](https://github.com/pivotal/jasmine/wiki/Asynchronous-specs)
+
+In our example implementation we defined a delay time of 500ms, for the test we will set waits to 1000ms.
 If you want to see the chart being created on every test, you could also set the wait up to f.e. 3000ms, to really see the chart being created and destroyed again.
 
-We should a simple button somewhere, as we will test a transition by simply setting new data as well as simulating a button click.
+We should also add a simple button somewhere, as we will test a transition by simply setting new data as well as simulating a button click.
 
 ```html
 <button id="switch">Switch Data</button>
@@ -445,8 +447,8 @@ describe('create bars' ,function() {
 
 All tests should run successfully and the chart already transforms on button click.
 
-[Here is the current code for the bar chart](https://gist.github.com/anonymous/d43a0a06d5c60773ea7b). We might consider adding an init function and we
- could also have setData automatically call the render() method instead of having to call it explicitly.
+[Here is the current code for the bar chart](https://gist.github.com/anonymous/d43a0a06d5c60773ea7b). We might consider adding an _init_ function and we
+ could also have _setData_ automatically call the _render()_ method instead of having to call it explicitly.
 This post focuses on the testing side of things, so we will leave it at this for now.
 See the [chart in action](http://jsbin.com/pifulavu/7/edit) or check the complete [code](https://gist.github.com/anonymous/d43a0a06d5c60773ea7b).
 
