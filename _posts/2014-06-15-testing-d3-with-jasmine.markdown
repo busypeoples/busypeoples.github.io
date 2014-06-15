@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Testing D3.js With Jasmine"
-date:   2015-06-14 12:00:00
+date:   2014-06-15 12:00:00
 tags:   D3.js, Javascript, Unit Tests, Karma, Jasmine
 published: true
 ---
