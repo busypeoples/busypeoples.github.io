@@ -5,9 +5,9 @@ date:   2014-06-19 12:00:00
 tags:   AngularJS, Javascript, Karma, Jasmine
 ---
 
-##The Basics
-This post is simply a reminder on how to test **AngularJS** directives. There seems to be no problem testing a service or a controller in AngularJS,
-but testing directives seems to be a little more complex or at least appears to be.
+###The Basics
+This post is simply a reminder on how to test **AngularJS** directives. There seems to be no problem testing a service or a controller in AngularJS
+compared to testing directives or at least testing directives appears to be more complex.
 
 We are actually dealing with minor complexities here, as we need to do a little more than when writing unit tests for controllers or services.
 We need to render the template, which can be achieved with the help of _$compile_,
@@ -137,14 +137,14 @@ describe('Collection Directive', function () {
 
 		scope = $rootScope.$new();
 
-		scope.customMessage = '<div class="custom-message">f u</div>';
+		scope.customMessage = '<div class="custom-message">foo</div>';
 		scope.items = [{id:1, title:'title a'}, {id:2, title:'title b'}];
 		$compile(elm)(scope);
 		scope.$digest();
 	}));
 ```
 
-Also added the helper matcher for Vojta Jina for quickly testing if a given class exists. You can find the code for the [ng-directive-testing on github](https://github.com/vojtajina/ng-directive-testing/blob/start/test/helpers.js).
+Also added the helper matcher from Vojta Jina for quickly testing if a given class exists. You can find the code for the [ng-directive-testing on github](https://github.com/vojtajina/ng-directive-testing/blob/start/test/helpers.js).
 
 ```javascript
 // https://github.com/vojtajina/ng-directive-testing/blob/start/test/helpers.js
@@ -271,14 +271,13 @@ describe('Collection Directive', function () {
 By adding _karma-ng-html2js-preprocessor_, updating the Karma configuration and including the module before each test inside our Jasmine tests
 we are able to test the directives that rely on templateUrl.
 
-Here is the final example:
-
-<p><iframe style="border: 1px solid #999; width: 100%; height: 300px; background-color: #fff;" src="http://embed.plnkr.co/c3YAZRfGju7IWlOnoBrH" height="300" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
-
-
 ###Roundup
 This post should be an introduction into testing AngularJS directives with Jasmine.
 There will be a follow up post concentrating on testing hierarchical directives.
+
+Here is the final example:
+
+<p><iframe style="border: 1px solid #999; width: 100%; height: 300px; background-color: #fff;" src="http://embed.plnkr.co/c3YAZRfGju7IWlOnoBrH" height="300" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
 ###Links
 [AngularJS Directives Documentation](https://docs.angularjs.org/guide/directive)
