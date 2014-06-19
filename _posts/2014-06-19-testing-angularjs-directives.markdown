@@ -271,6 +271,11 @@ describe('Collection Directive', function () {
 By adding _karma-ng-html2js-preprocessor_, updating the Karma configuration and including the module before each test inside our Jasmine tests
 we are able to test the directives that rely on templateUrl.
 
+Here is the final example:
+
+<p><iframe style="border: 1px solid #999; width: 100%; height: 300px; background-color: #fff;" src="http://embed.plnkr.co/c3YAZRfGju7IWlOnoBrH" height="300" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+
+
 ###Roundup
 This post should be an introduction into testing AngularJS directives with Jasmine.
 There will be a follow up post concentrating on testing hierarchical directives.
