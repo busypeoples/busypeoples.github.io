@@ -23,8 +23,8 @@ one might simply add a new attribute or extend existing functions to handle this
 ###Testing Directives - the standard
 
 Before we can write any tests, let us look at a basic example for a directive. The _Collection_ directive will render a collection and display every item
-as a row. The example is based on [Testing directive – the easy way](https://github.com/vojtajina/ng-directive-testing) by **Vojta Jina**, who also is part of the AngularJS team.
-You might have a look at the test set up, in case you need a primer into setting up the configuration with Karma and Jasmine. The example also relies on jQuery, due to
+as a row. The example is influenced by [Testing directive – the easy way](https://github.com/vojtajina/ng-directive-testing) by **Vojta Jina**, who is also part of the AngularJS team.
+You might have a look at the test set up, in case you need a primer into setting up the configuration with **Karma** and **Jasmine**. The example also relies on **jQuery**, due to
 the fact that we want to easily access dom elements and verify their existence or content. We could also use AngularJS own jQLite, but it is rather easier to go with aforementioned approach.
 
 Well the view script is really trivial, we defined a collection element and added some custom text or message.
@@ -66,7 +66,6 @@ Module.directive('collection', function () {
 			items: '=items'
 		},
 		controller: 'collectionController',
-		// templateUrl: 'tpl/tabs.html',
 		template: '<div class="collection">' +
 			'<div ng-transclude></div>' +
 			'<div ng-repeat="item in items">' +
@@ -80,7 +79,7 @@ Module.directive('collection', function () {
 });
 ```
 
-The template in the basic implementation is really inlined into the javascript file. We use ngTransclude to add some custom text and we are
+The template in the is really inlined into the javascript file. We use _ngTransclude_ to add some custom text and we are
 be able to test this part of the code very easily, as we can access predefined ids and the sort (as seen in an upcoming example). We also have a collectionController that offers a couple of
 basic methods like setting the currently selected item as active or adding new items.
 
@@ -110,9 +109,9 @@ Module.controller('collectionController', ['$scope', function ($scope) {
 }]);
 ```
 
-This is really it, we have a directive that will simply render a given set of items into a set of divs.
+This basically is it, we have a directive that will simply render a given set of items into a set of divs.
 
-Testing this directive with current conditions:
+Next, testing this directive with the current conditions:
 
 + We have no templateUrl defined.
 
@@ -123,8 +122,6 @@ Testing this directive with current conditions:
 
 Let us have a look at setting up the tests.
 We can use _$compile_ to render the html and _$digest_ for updating the template with the new data.
-This all we really need.
-
 
 ```javascript
 describe('Collection Directive', function () {
@@ -205,11 +202,11 @@ it('should change active item when edit button is clicked', function () {
 });
 ```
 
-We could also add tests the verify that custom message has been rendered, tests that verify we can add a new item and so on.
+We could also add tests that verify if a custom message has been rendered, tests that verify if we can add a new item and so on.
 
 ###Testing Directives that use templateUrl
 By using the templateUrl option inside a directive, we can avoid having to inline html into our javascript code.
-This is really helpful when the template simply does more than warp a property inside a div tag.
+This is really helpful when the template simply does more than warp a property with div tags.
 
 Our previous collection directive now uses templateUrl to load the html:
 
@@ -228,7 +225,7 @@ Module.directive('collection', function () {
 });
 ```
 
-With the basic karma/jasmine setup you will run into a problems, because the templates will never get loaded instead you have to deal the following error:
+With the basic Karma/Jasmine setup you will run into problems because the templates will never get loaded instead you have to deal the following error:
  _Error: Unexpected request: GET tpl/collection.html_
 
 There is a very simple solution to the aforementioned problem: karma's ng-html2js preprocessor which will enable Karma to automatically generates the js file and adds
@@ -240,7 +237,7 @@ To install run the following command.
 npm install karma-ng-html2js-preprocessor --save-dev
 ```
 
-It is also required to adapt the karma configuration (in case you use karma with Jasmine), for more details
+It is also required to adapt the Karma configuration (in case you use Karma with Jasmine), for more details
 see [Testing AngularJS directive templates with Jasmine and Karma](http://daginge.com/technology/2013/12/14/testing-angular-templates-with-jasmine-and-karma/)
 
 ```javascript
@@ -269,11 +266,11 @@ describe('Collection Directive', function () {
 
 	beforeEach(module('example'));
 
-	// 'templates' can be anything, is defined via karma config.
+	// 'templates' can be anything, is defined via Karma config.
 	beforeEach(module('templates'));
 ```
 
-By adding _karma-ng-html2js-preprocessor_, updating the karma configuration and including the module before each test inside our Jasmine tests
+By adding _karma-ng-html2js-preprocessor_, updating the Karma configuration and including the module before each test inside our Jasmine tests
 we are able to test the directives that rely on templateUrl.
 
 ###Roundup
