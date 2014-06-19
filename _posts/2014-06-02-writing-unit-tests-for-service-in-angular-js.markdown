@@ -40,9 +40,9 @@ Due to the fact we can return any values we want and we really only test the ser
 Our final example will focus on a possible setup where one service might depend on another service.
 We are dealing with mocks again, only this time we also have to create the mocks.
 
-<p><iframe style="border: 1px solid #999; width: 100%; height: 320px; background-color: #fff;" src="http://embed.plnkr.co/MbmitpMfiSbdZebnUMWq/script.js" height="320" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+<p><iframe style="border: 1px solid #999; width: 100%; height: 320px; background-color: #fff;" src="http://embed.plnkr.co/qXqitB5MO3T4hshYL4Pw/script.js" height="320" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
-<p><iframe style="border: 1px solid #999; width: 100%; height: 400px; background-color: #fff;" src="http://embed.plnkr.co/MbmitpMfiSbdZebnUMWq/test.js" height="400" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+<p><iframe style="border: 1px solid #999; width: 100%; height: 400px; background-color: #fff;" src="http://embed.plnkr.co/qXqitB5MO3T4hshYL4Pw/test.js" height="400" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
 Finally an alternative approach, this one uses jasmine to create a spy object, which is used to mock the service and return expected data via the andReturn() method.
 

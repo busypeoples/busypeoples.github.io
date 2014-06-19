@@ -7,27 +7,24 @@ tags:   AngularJS, Javascript, Karma, Jasmine
 
 ##The Basics
 This post is simply a reminder on how to test **AngularJS** directives. There seems to be no problem testing a service or a controller in AngularJS,
-but testing directives might appear a little more complex.
+but testing directives seems to be a little more complex or at least appears to be.
 
 We are actually dealing with minor complexities here, as we need to do a little more than when writing unit tests for controllers or services.
-We need to render the template, which can be easily achieved with the help of $compile and we need to verify that elements exists or are rendered the way they should be.
+We need to render the template, which can be achieved with the help of _$compile_,
+and we need to verify that elements exists or are rendered the way they should be.
 
 I will break this section into multiple parts, just to cover different possibilities and problems that you might have to face when testing directives.
 The following topics should be covered in this post: dealing with a single directive + controller and directives with external
 templates. A follow up post will concentrate on  hierarchical directives and testing strategies regarding directive dependencies.
 
-Testing a reusable directive should be a high priority, just to make sure that extending or changing the implementation will not break
-the current status. Sometimes a directive will be adapted a long the way just to fit a special case that pops up. Instead of having to create a new directive,
-one might simply add a new attribute or extend existing functions to handle this new special case. This is not uncommon.
+###Testing Directives - the details
 
-###Testing Directives - the standard
-
-Before we can write any tests, let us look at a basic example for a directive. The _Collection_ directive will render a collection and display every item
-as a row. The example is influenced by [Testing directive – the easy way](https://github.com/vojtajina/ng-directive-testing) by **Vojta Jina**, who is also part of the AngularJS team.
+Before we can write any tests, we will need a basic directive example. The _Collection_ directive will render a collection and display every item
+as a row. The example is inspired by [Testing directive – the easy way](https://github.com/vojtajina/ng-directive-testing) by **Vojta Jina**, who is also part of the AngularJS team.
 You might have a look at the test set up, in case you need a primer into setting up the configuration with **Karma** and **Jasmine**. The example also relies on **jQuery**, due to
-the fact that we want to easily access dom elements and verify their existence or content. We could also use AngularJS own jQLite, but it is rather easier to go with aforementioned approach.
+the fact that we want to easily access dom elements and verify their existence or content. We could also use AngularJS' own **jQLite**, but it is rather easier to go with aforementioned approach.
 
-Well the view script is really trivial, we defined a collection element and added some custom text or message.
+Well, the view script is really trivial: we defined a collection element and added some custom text or message.
 
 ```html
 <div ng-app="example">
@@ -79,8 +76,9 @@ Module.directive('collection', function () {
 });
 ```
 
-The template in the is really inlined into the javascript file. We use _ngTransclude_ to add some custom text and we are
-be able to test this part of the code very easily, as we can access predefined ids and the sort (as seen in an upcoming example). We also have a collectionController that offers a couple of
+The template is really inlined into the javascript file.
+We also use _ngTransclude_ to add some custom text plus we are
+be able to test this part of the code very easily, as we can access predefined ids and the sort (as seen in an upcoming example). We also have a _collectionController_ that offers a couple of
 basic methods like setting the currently selected item as active or adding new items.
 
 ```javascript
@@ -284,6 +282,6 @@ There will be a follow up post concentrating on testing hierarchical directives.
 
 [Karma](http://karma-runner.github.io/0.12/index.html)
 
-[ngDirective Testing Example](https://github.com/vojtajina/ng-directive-testing/)
+[Testing directive – the easy way](https://github.com/vojtajina/ng-directive-testing/)
 
 [Testing AngularJS directive templates with Jasmine and Karma](http://daginge.com/technology/2013/12/14/testing-angular-templates-with-jasmine-and-karma/)
