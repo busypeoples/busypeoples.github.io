@@ -3,7 +3,6 @@ layout: post
 title:  "Building a &lt;bar-chart&gt; element with D3.js and Polymer"
 date:   2014-06-21 12:00:00
 tags:   Polymer, D3.js, Javascript
-published: false
 ---
 
 ###The Basics
