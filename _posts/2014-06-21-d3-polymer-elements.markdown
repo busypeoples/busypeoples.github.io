@@ -8,7 +8,7 @@ tags:   Polymer, D3.js, Javascript
 ###The Basics
 **Polymer** is about custom elements, as everything is an element from a Polymer point of view.
 Polymer is not the only library that enables creating custom elements, we could achieve the same with _AngularJS directives_ or _ember.js components_ for example.
-For a very detailed explanation of what the differences between Polymer elements and angular directives check [this answer on stackoverflow](http://stackoverflow.com/questions/18089075/what-is-the-difference-between-polymer-elements-and-angularjs-directives)
+For a very detailed explanation of the differences between Polymer elements and angular directives check [this answer on stackoverflow](http://stackoverflow.com/questions/18089075/what-is-the-difference-between-polymer-elements-and-angularjs-directives)
 
 Why would we even consider trying to build custom elements in the first place?
 
@@ -41,7 +41,7 @@ Defining a Polymer element is done with a couple lines of code actually:
 <polymer-element name="bar-chart" attributes="originalData switchData">
     <template>
       <span class="bar-chart-example">
-       <svg id="barchart" width="{{ width }}" height="height"></svg>
+       <svg id="barchart" width="{{ "{{ width "}}}}" height="{{ "{{ height "}}}}"></svg>
       </span>
       <div>
         <button class="btn" id="clickable">Flip Data</button>
@@ -64,14 +64,14 @@ Defining a Polymer element is done with a couple lines of code actually:
 
 We obviously defined a name for the polymer-element via the name attribute .
 We also defined which attributes we would accept: _attributes="originalData switchData"_
-and further more we also set up the template, which only consists of a span containing an svg and a button element.
+and further more we also set up the template, which only consists of a span containing a svg and a button element.
 
 
 The _barChart_ function depends on a pre defined svg element, this might also be implemented by having the bar chart create the svg,
 but attention should be kept on the fact that [D3.js might have problems working in the shadow dom](http://stackoverflow.com/questions/20557913/d3-js-wont-work-in-a-shadowdom).
 
 The _render_ methods expects an array containing the relevant data and then calls the appropriate bar and axis methods.
-This is just a basic implementation of a d3 bar chart enabling transformations when data changes.
+This is just a basic implementation of a D3 bar chart enabling transformations when data changes.
 
 
 ```javascript
@@ -189,7 +189,7 @@ Polymer('bar-chart', {
 
 A lot more is happening inside the _ready_ method, for example we have to parse the string properties back into an array and we also initiated the bar chart,
 the button and the button click event.
-But this is all we need, to enable the bar chart to render from now on.
+This is all we need, to enable the bar chart to render from now on.
 
 ```javascript
 ready: function() {
@@ -241,9 +241,10 @@ Or if we wanted to switch between two data sets, we would pass the second data s
 
 ###Roundup
 This is an initial look into what can be done with D3.js and Polymer.
-We can implement different d3 visualizations and create the corresponding elements from there on.
+We can implement different D3 visualizations and create the corresponding elements from there on.
 We might have a set of elements like &lt;pie-chart&gt; or &lt;stacked-area-chart&gt; making it easy to reuse elements over and over again
-and quickly combining elements like legends with charts to create interesting data visualizations.
+and quickly combining elements like legends with charts to create interesting data visualizations. Another aspect that has not be handled in this post is data binding, enabling
+the element to react on data changes.
 What should be considered is the fact that Polymer is in development and that therefore results might vary between browsers.
 
 <p><iframe style="border: 1px solid #999; width: 100%; height: 550px; background-color: #fff;" src="http://embed.plnkr.co/XcTf5GmGLhAiVImAKHGQ" height="550" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
