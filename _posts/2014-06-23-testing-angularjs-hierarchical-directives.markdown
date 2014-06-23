@@ -3,7 +3,6 @@ layout: post
 title:  "Testing AngularJS hierarchical Directives with Jasmine"
 date:   2014-06-23 12:00:00
 tags:   AngularJS, Javascript, Unit Tests, Karma, Jasmine
-published: false
 ---
 
 ###The Basics
@@ -117,7 +116,7 @@ Module.directive('item', function () {
 
 There a couple of possible approaches here:
 
-One way is to wrap the _collection_ directive around the _item_directive when calling $compile:
+One way is to wrap the _collection_ directive around the _item_directive when calling $compile the other approach is to mock the controller. Adding a jasmine spy will also enable to verify if certain methods have been called when triggering a click for example. Here is an example implementation for a mocked controller:
 
 ```javascript
 beforeEach(inject(function($rootScope, $compile) {
@@ -141,7 +140,6 @@ beforeEach(inject(function($rootScope, $compile) {
 
 it('should create one div item', function() {
 	var items = elm.find('.item-class');
-	console.log(elm);
 	expect(items.text()).toContain('testing - id: 1');
 });
 ```
