@@ -8,7 +8,7 @@ tags:   AngularJS, Javascript, Unit Tests, Karma, Jasmine
 ###The Basics
 
 Based on the previous [Testing AngularJS Directives with Jasmine](http://busypeoples.github.io/post/testing-angularjs-directives) post we will extend the _collection_ directive.
-The _collection_ directive renders a set of rows based on a given set.
+The _collection_ directive renders a set of rows based on a given data set.
 In this example the existing directive will call another directive, the _item_ directive for every data object.
 Before we continue, you might have a look at the [original code](http://plnkr.co/edit/c3YAZRfGju7IWlOnoBrH).
 
@@ -37,7 +37,7 @@ Module.directive('collection', function () {
 });
 ```
 
-The _item_ directive is very minimal, all it does it render the item itself.
+The _item_ directive is very minimal, all it does is render the item itself.
 
 ```javascript
 Module.directive('item', function () {
@@ -116,7 +116,7 @@ Module.directive('item', function () {
 
 There a couple of possible approaches here:
 
-One way is to wrap the _collection_ directive around the _item_directive when calling $compile the other approach is to mock the controller. Adding a jasmine spy will also enable to verify if certain methods have been called when triggering a click for example. Here is an example implementation for a mocked controller:
+One way is to wrap the _collection_ directive around the _item_ directive when calling $compile the other approach is to mock the controller. Adding a jasmine spy will also enable to verify if certain methods have been called when triggering a click for example. Here is an example implementation for a mocked controller:
 
 ```javascript
 beforeEach(inject(function($rootScope, $compile) {
