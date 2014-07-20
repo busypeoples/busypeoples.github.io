@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Feedback Driven (Personal) Development Or Why Feedback Matters."
+date:   2014-07-20 12:00:00
+tags:   Agile, Management, Scrum
+published: true
+---
+
+I was just reading an [interesting blog post from Stephanie Gasche](http://borisgloger.com/2014/04/01/in-kleinen-schritten-feedback-foerdern/), a German scrum consultant.
+She enforced the idea of providing feedback after a meeting, a session or other team focused events. Feedback helps to give meaning to our daily work lives and drives most engineers or people in the technological field in general to strive for perfection.
+
+The scrum framework has a built-in feedback mechanism, just think about the retrospective, which is basically a collective team focused sprint reflection.  This is good but we need to take it a step further, it's really about the nuances here. Feedback should happen instantly, it might consume one minute of a team's time, giving everyone the opportunity to provide as well as receive feedback. In some cases valuable feedback. At the end of the day everything boils down to communication, you either can communicate or you simply can not. This is the key to getting teams to perform. There is no blue print, you can not do it according to some handbook and you definitely can not turn it into some  process, this will defeat the purpose. We need the shades of grey, the dynamic element and the creative impulse that comes from communication.
+
+The post-its and task boards are nice, but we need to put people over process - this should not be a meaningless slogan. I will try to describe a typical situation that every one involved in the tech field, be it as a project manager, engineer, designer, scrum master etc. keeps seeing over and over again. I would like to call it „attention seeking“, there are other words out there that describe this phenomenon but i will stick to this simple one. As soon as technical debate breaks out, there is always a group that starts discussing. The problem with those discussions more often than not, is that it's not really about solving a problem, but all about who solves the problem. Getting your point across by no means, also means avoiding to really listen to what others have to say. 5, 6 people discussing nuances, the ideas are similar, it's really boiling down to minor changes in code, be it adding a new class, removing unused or useless methods or changing property names. And still everyone is interested in bring in his idea form a-z, a „winner takes it all“ mentality, that mostly really hurts the team as a whole and secondly will lead to even more discussions down the road, f.e. as soon as the code has to be touched again in the near future.
+
+What is this „attention seeking“ all about anyway?
+
+I guess it has a lot to do with uncertainties, having to prove over and over again that one is on top of the game and self reassurance. The best engineers i have seen or heard talk are open for critism, are highly self confident in accepting other people's ideas and incorporating different best cases instead of trying to reinvent the wheel over and over again.
+
+The attention seeking problem can be avoided. Team members need to give feedback early on, telling the team at a stand up that developer x's implementation was great is a sign of maturity and giving credit where credit is due is powerful. To be acknowledged for ones work means one has to also acknowledge other people's work.
+
+If your doing agile and still holding to the myth of certain individual super programmers, you are simply doing it wrong. A culture where everyone talks and no one listens will lose a lot of opportunities along the way and a culture where individuals are forced to keep talking just for the sake of talking, will simply lag behind companies with a strong team culture. At the end of the day it's up to teams, companies and individuals to build a culture that is respectful and cooperative. Just saying you are agile or being „scrum to the core“ will simply not be enough.
