@@ -32,8 +32,8 @@ Instead of letting a scrum master or other non team members decide how a daily s
 
 The daily should **never be a status meeting**, it should keep the team synchronized.
 Instead of answering the aforementioned three questions, why not focus on what has to be done from a team perspective.
-Where are we from a sprint point of view, what needs to be done to reach the commitment and what roadblocks need to be removed?
-With that, we entirely focus on the status quo, which means: what do we need to do to fulfil our commitment?
+*Where are we from a sprint point of view, what needs to be done to reach the commitment and what roadblocks need to be removed?*
+With that, we entirely focus on the status quo, which means: *what do we need to do to fulfil our commitment?*
 The team only takes care of the tasks left, and the team might even discuss who will do what as a collective, instead of every single team member committing to certain tasks without consulting with the other team members.
 
 Of course every change will fail if the daily is misused as a certain control mechanism, where it's sole purpose is to see who is doing what and who is not delivering as expected. Every attempt to change the status quo will also fail if a company's reality is all about process over people.
