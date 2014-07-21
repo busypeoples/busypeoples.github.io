@@ -21,12 +21,12 @@ Adding dynamic to your daily:
 
 ####a.) Rename The Daily
 
-The daily might be associated with something negative over time, renaming the daily as part of the adaption might be helpful. This strategy must be combined with real change of course, otherwise this will have no effect whatsoever. Imagine this as some internal rebranding.
+The daily might be associated with something negative over time, renaming the daily as part of the adaption could prove to be helpful. This strategy must be combined with real change of course, otherwise this will have no effect whatsoever. Imagine this as some internal rebranding.
 Lay emphasis on the fact that this is more than the “same old same old” and signal change.
 
 ####b.) Let The Team Decide
 
-Instead of letting a scrum master or other non team members decide how a daily should run, you might consider having the team decide what the daily should accomplish, how the daily should take place, what should be solved etc. For example have the team decide on a set of rules and goals and write them down. Hang the rules up on a poster so everybody can read them, make the daily rituals visible. But also make sure that this is a dynamic process, some rules might prove to be ineffective and should be removed or new goals can be added over time when this seems suitable. See this as a *point in time set of definitions*, that should support the team to unfold their potential.
+Instead of letting a scrum master or other non team members decide how a daily should run, you could consider having the team decide what the daily should accomplish, how the daily should take place, what should be solved etc. For example have the team decide on a set of rules and goals and write them down. Hang the rules up on a poster so everybody can read them, make the daily rituals visible. But also make sure that this is a dynamic process, some rules might prove to be ineffective and should be removed or new goals can be added over time when this seems suitable. See this as a *point in time set of definitions*, that should support the team to unfold their potential.
 
 ####c.) Focus On The Outcome
 
