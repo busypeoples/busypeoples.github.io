@@ -32,6 +32,10 @@ h3, h4, h5, h6 {
 	margin-top: 1em;
 }
 
+h3 {
+  margin-top: 2.5em;
+}
+
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
