@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "$asyncValidators, $touched and ngMesages: Form Validation In AngularJS 1.3"
+title:  "$asyncValidators, $touched and ngMessages: Form Validation In AngularJS 1.3"
 date:   2015-01-30 12:00:00
 tags:   AngularJS, Javascript
 published: true
