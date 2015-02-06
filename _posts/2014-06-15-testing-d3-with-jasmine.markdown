@@ -30,7 +30,7 @@ var svg = d3.select('body').append('svg')
              .attr('height', '500')
              .attr('width', '500')
             .append('g')
-             .attr("transform", "translate("0, 0")");
+             .attr("transform", "translate(0, 0)");
 ```
 
 This code will not produce any visible results but if you inspect the dom you will see that the svg element has been created:
