@@ -85,7 +85,7 @@ describe('Test D3.js with jasmine ', function() {
     });
 
     it('should have the correct height', function() {
-      expect(getSvg().attr('width')).toBe('500');
+      expect(getSvg().attr('height')).toBe('500');
     });
 
     it('should have the correct width', function() {
