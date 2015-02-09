@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Component Based Thinking in AngularJS"
-date:   2015-02-08 12:00:00
+date:   2015-02-09 12:00:00
 tags:   AngularJS, Javascript, Components
-published: false
+published: true
 ---
 
 ### Introduction
