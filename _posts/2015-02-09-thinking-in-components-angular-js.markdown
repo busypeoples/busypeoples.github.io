@@ -82,7 +82,7 @@ into smaller child controllers only shifts but doesn't solve the underlying prob
 
 + **Large HTML templates** that are hard to understand or maintain. 
 
-+ **Complicated to test.** We can not simply isolate parts of the view to test the controller/view combination.
++ **Complicated to test.** We can not easily isolate parts of the view to test the controller/view combination.
 
 The introduction of the _'controller as'_ syntax  solved a coupe of problems regarding ng-controllers include shadowing 
 parent controller properties and functions for example and accessing the parent scope inside the view became more explicit. 
@@ -165,7 +165,7 @@ item lists.
 
 The **itemsList** directive expects a title and a collection of items. 
 Using an isolated scope enables us to only pass the data that is really needed. We can use one-way binding to pass in the title
-and use two-way binding for the data. One-way binding simply due to the fact, that we are passing in a
+and use two-way binding for the data. One-way binding due to the fact, that we are passing in a
 string and we only want render the title not change it.
 
 ```javascript
@@ -185,7 +185,7 @@ app.directive('itemsList', function() {
 });
 ```
 
-The template that simply consists of the following markup for now:
+The template simply consists of the following markup for now:
 
 ```html
 <div class="items-list">
@@ -200,7 +200,7 @@ The template that simply consists of the following markup for now:
 ```
 
 
-By using the _controllerAs_ and the _bindToController_ features in the directive definition we now have to write _ctrl.items_ not simply _items_ inside the template.
+By using the _controllerAs_ and the _bindToController_ features in the directive definition we now have to write _ctrl.items_ not just _items_ inside the template.
 The items list views displays a title and converts a given set of items to single row **item directives**.
 
 The main HTML looks like this:
@@ -218,7 +218,7 @@ We get the following result when rendering the page:
 
 
 Nothing special going on here so far. We have two lists that have different titles but render the exact same items.
-This is obviously due to the fact that we are simply passing in the same set of items.
+This is obviously due to the fact that we are passing in the same set of items.
 The next step will include explicitly setting the correct data for each of the **itemList** components.
 
 Further more clicking the checkbox doesn't do anything, so we will need to add some clicking behaviour as well.
@@ -302,7 +302,7 @@ The main container HTML template needs to be updated with the previously defined
 </div>
 ```
 
-The HTML file now simply consists of the ng-app declaration and the _items-container_ directive.
+The HTML file consists of the ng-app declaration and the _items-container_ directive now.
 
 ```html
 <body ng-app="app">
