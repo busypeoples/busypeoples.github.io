@@ -158,7 +158,9 @@ Simulating the input can be achieved by accessing the input's ngModelController 
 
 ### Testing the ItemsContainerController
 
-The ItemsContainer composes all the previously tested components. Testing the **ItemsContainerController** ensures that the data updates are handled as expected and 
+The ItemsContainer composes all the previously tested components. 
+
+Testing the **ItemsContainerController** ensures that the data updates are handled as expected and 
 that the lower level components receive the correct data to function properly.
 Further the container also gets an ItemsService injected, which we will mock when testing
 the overall component behaviour. Mocking can be achieved by creating a dummy service object for example. 
