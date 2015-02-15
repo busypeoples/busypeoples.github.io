@@ -193,8 +193,8 @@ The mocked object will always return the same set of items.
   });
 ```
 
-One interesting aspect is that we can test a _'controller as'_ controller by simply declaring the 
-controller with the 'controller as' syntax when creating the controller via $controller.
+One interesting aspect is that we can test a _'controller as'_ controller by also using the 
+'controller as' syntax when creating the controller via $controller.
 
 ```javascript
   beforeEach(inject(function($controller, _$rootScope_, _$compile_) {
