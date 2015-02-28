@@ -28,7 +28,7 @@ The following will only focus on getting the tests up and running not on the com
 ```javascript
 {
     "devDependencies": {
-    "gulp": "~3.8.11",
+        "gulp": "~3.8.11",
         "karma": "~0.12.31",
         "browserify": "^9.0.3",
         "babelify": "~5.0.3",
