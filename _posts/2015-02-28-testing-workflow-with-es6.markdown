@@ -39,7 +39,7 @@ The following will only focus on getting the tests up and running not on the com
 }
 ```
 
-Running npm **install** will download the required resources.
+Running **npm install** will download the required resources.
 
 ###Configuration
 The karma configuration has to be slightly adapted, including defining the files to be preprocessed with browserify and configuring browserify to transform via babelify.
