@@ -106,7 +106,7 @@ describe('ES6 Foo', function () {
         foo = new Foo();
     });
     
-    it('Foo should create new instance', ()=>{
+    it('should return Do Something when calling doSomething', ()=>{
         expect(foo.doSomething()).toEqual('Do Something');
     });
 });
