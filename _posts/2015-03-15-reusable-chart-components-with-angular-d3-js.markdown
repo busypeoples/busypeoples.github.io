@@ -10,7 +10,7 @@ published: true
 
 The following should be an introduction to combining **D3.js** with **AngularJS** to create reusable chart components.
 This is not intended to be an introduction on D3.js nor AngularJS, there is a large number of resources to help getting of the ground
-with either, for example the [official D3 website](http://d3js.org/) and the extensive [AngularJS documentation](https://docs.angularjs.org/).
+with either. For example the [official D3 website](http://d3js.org/) and the extensive [AngularJS documentation](https://docs.angularjs.org/).
 
 The prime objective of this post to create a **\<chart\>** component that composes bar and axis components and further more
 enables configuring the transitions of any component. The result should be a markup that 
@@ -27,7 +27,7 @@ when the data gets updated. The markup should look something like this:
 </chart>
 ```
 
-This is what we want:
+This is the expected result:
 
 <p><iframe style="border: 1px solid #999; width: 100%; height: 650px; background-color: #fff;" src="http://embed.plnkr.co/t3if5Z1hDapXFp4O5QPa/preview" height="550" width="320" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
@@ -153,11 +153,11 @@ Now that we have implemented the basic bar component we need a way to handle the
 every component receives the data needed to function. Any data is passed on to the  **\<chart\>** component via the _data_ property and the config respectively
 via the _config_ property.
 
-The **chart component** needs to take care of creating the initial SVG element, handling the data, computing the x,y, xAxis and yAxis properties and 
+The **chart component** needs to take care of creating the initial SVG element, handling the data, computing the x, y, xAxis and yAxis properties and 
 passing it on to any child component that has registered itself to be notified via an update.
 
 The registration part can be handled by the directive controller, everything else should be defined inside 
-the link function. As soon as the data changes, the notify function is called which then simply tells the controller 
+the link function. As soon as the data changes, the _notify_ function is called which then simply tells the controller 
 to notify all subscribers with the given data and configuration.
 
 ```javascript
