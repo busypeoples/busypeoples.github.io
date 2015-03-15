@@ -94,15 +94,14 @@ function barsLinkFn($scope, element, attrs, ctrl) {
     var key = attrs.configKey || 'undefined';
     
     function update(data) {
-      var config = data.config,
-        data = data.data;
+        var config = data.config, data = data.data;
     
-      var bars = config.svg.selectAll(".bar")
-        .data(data);
+        var bars = config.svg.selectAll(".bar")
+            .data(data);
     
-      var entered = bars.enter().append("rect")
-        .attr('class', 'bar')
-        .attr('opacity', 0);
+        var entered = bars.enter().append("rect")
+            .attr('class', 'bar')
+            .attr('opacity', 0);
     }
 }
 ```
@@ -124,16 +123,16 @@ The service calls the specific transitions via D3's _call_ method, which then tr
 ```javascript
 charts.service('ChartTransitions', function() {
 
-  this.transition = function(entering, elements, transitions, config) {
-    var onEnter = entering.transition();
-    var transition = elements.transition();
-    var exit = elements.exit();
-    var onExit = exit.transition();
-
-    if (transitions.onEnter) onEnter.call(transitions.onEnter.bind(onEnter, config));
-    if (transitions.onTransition) transition.call(transitions.onTransition.bind(transition, config));
-    if (transitions.onExit) onExit.call(transitions.onExit.bind(onExit, config));
-  };
+    this.transition = function(entering, elements, transitions, config) {
+        var onEnter = entering.transition();
+        var transition = elements.transition();
+        var exit = elements.exit();
+        var onExit = exit.transition();
+        
+        if (transitions.onEnter) onEnter.call(transitions.onEnter.bind(onEnter, config));
+        if (transitions.onTransition) transition.call(transitions.onTransition.bind(transition, config));
+        if (transitions.onExit) onExit.call(transitions.onExit.bind(onExit, config));
+    };
   
 });
 ```
@@ -158,7 +157,36 @@ The **chart component** needs to take care of creating the initial SVG element, 
 passing it on to any child component that has registered itself to be notified via an update.
 
 The registration part can be handled by the directive controller, everything else should be defined inside 
-the link function. 
+the link function. As soon as the data changes, the notify function is called which then simply tells the controller 
+to notify all subscribers with the given data and configuration.
+
+```javascript
+function notify() {
+    var data = $scope.ctrl.data || {};
+    
+    config.xAxis = d3.svg.axis()
+        .scale(config.x)
+        .orient("bottom");
+    
+    config.yAxis = d3.svg.axis()
+        .scale(config.y)
+        .orient("left");
+    
+    config.x.domain(data.map(function(d) {
+        return d.x;
+    }));
+    config.y.domain([0, d3.max(data, function(d) {
+        return d.y;
+    })]);
+    
+    ctrl.notify({
+          data: data,
+          config: config
+    });
+}
+
+$scope.$watch('ctrl.data', notify);
+```
 
 Check the [code](http://plnkr.co/edit/t3if5Z1hDapXFp4O5QPa) example for all implementation details. 
 
