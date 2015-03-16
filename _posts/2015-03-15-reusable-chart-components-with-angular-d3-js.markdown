@@ -12,7 +12,7 @@ The following should be an introduction to combining **D3.js** with **AngularJS*
 This is not intended to be an introduction on D3.js nor AngularJS, there is a large number of resources to help getting of the ground
 with either. For example the [official D3 website](http://d3js.org/) and the extensive [AngularJS documentation](https://docs.angularjs.org/).
 
-The prime objective of this post to create a **\<chart\>** component that composes bar and axis components and further more
+The prime objective of this post is to create a **\<chart\>** component that composes bar and axis components and further more
 enables configuring the transitions of any component. The result should be a markup that 
 describes the chart as well as the possibility to hook into the transition process and override default transition behaviours.
 
