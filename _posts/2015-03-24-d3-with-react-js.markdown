@@ -1,37 +1,25 @@
 ---
 layout: post
-title: "Replacing D3 with React"
+title: "Reusable Chart Components with React And D3"
 date:   2015-03-24 12:00:00
-tags:   React, d3, Javascript, web components
+tags:   React, D3, Javascript, web components
 published: true
 ---
 
 ### Introduction
 
 The following should be an introduction to combining **D3** with **React** to create reusable chart components.
-This is not intended to be an introduction into D3 nor React, there is a large number of resources to help getting of the ground
-with either frameworks, for example [this](http://d3js.org/) forD3 and [this](https://facebook.github.io/react/) for React.
+This is not intended to be an introduction into D3 nor React, there is a large number of resources to help getting off the ground
+with either frameworks, for example [this](http://d3js.org/) for D3 and [this](https://facebook.github.io/react/) for React.
 
-D3s approach to data visualization is a well fit with the React way of building UI components and App structuring.
+D3s approach to data visualization fits well with the React way of building UI components and App structuring.
 React encourages to figure out how to structure a number of components to enforce a data flow that moves from top down, meaning
 that lower level components receive data and render it at best and only keep state if needed, but never manipulating any data that might 
 affect the higher up components.
 
-React actually enforces on concept, that being if I insert the same data a multiple number of times
-the result should always be the same, this is actually the only assumption that React expects to behave properly. 
+Another strong correlation between the libraries is their respective component lifecycle. D3 has **enter**, **update** and **exit**.
 
-Another strong focus is on figuring on out where state might be needed inside the application and which component should be in charge of this. 
-The norm is to define the state in a higher up component, rather than in a lower component or rather a component should only store 
-the state that is important for itself and not important for any components higher up the tree. For example certain information
-on how to display certain UI aspects or form input data.
-Which means that the data always moves from the top to bottom. Lower components should never be able to mutate the data
-leading to data changes higher up the component tree.
-
-This approach is not knew but powerful and is a well fit into replacing the original D3 rendering with React itself. 
-
-Another strong correlation between the libraries is their respective component lifecycle. D3 has **enter**, **upate** and **exit**.
-
-React has **componentWillUpdate**, **ComponentDidUpdate** and **ComponentWillUnmount**, enabling us to map the D3 lifecycle directly to the React one.
+React has **componentWillUpdate**, **componentDidUpdate** and **componentWillUnmount**, enabling us to map the D3 lifecycle directly to the React one.
 
 The following is just an experiment to see how far we can replace the D3 rendering with React. 
 
@@ -41,14 +29,14 @@ We will build a simple bar chart that consists of a number of rect elements.
 The basic building blocks for the example consist of a basic App container that composes a Chart component, setting the original height and 
 width and passing the current data via props.
 
-```javascript
+```html
 var Chart = React.createClass({
     render: function() {
         return (
-            <svg width={this.props.width} 
+            {% raw %} <svg width={this.props.width} 
                  height={this.props.height} >
               {this.props.children}
-            </svg>
+            </svg>{% endraw %} 
         );
     }
 });
@@ -111,9 +99,9 @@ React.render(
 ```
 
 An initial look at the Chart component will reveal nothing special here. We are simply passing in the height, width and data via props.
-The Chart component doesn't don anything special here. The only note worthy aspect here is that we are creating the svg element.
+The Chart component doesn't do anything special here. The only noteworthy aspect here is that we are creating the svg element.
 
-```javascript
+```html
 var Chart = React.createClass({
     render: function() {
         return (
@@ -130,16 +118,16 @@ var Chart = React.createClass({
 The most interesting part in the initial example is the Bar component code.
 This is where D3 and React connect for the first time. 
 
-To prevent any re-rendering we check we added the _shouldComponentUpdate_ method, which 
+To prevent any re-rendering we added the _shouldComponentUpdate_ method, which 
 compares the current data with the upcoming data. In case the data has not changed, we simply return false and 
 skip the rendering. Think in a D3 context, when the data has not changed, D3 simply doesn't do anything either.
 
-The main action takes place inside the _render_ function, where we use the D3 to define the needed _y-_ and _xScale_
+The main action takes place inside the _render_ function, where we use D3 to define the needed _y-_ and _x-Scale_
 and calculate the expected _x_, _y_, _height_ and _width_ values for every single rect element we want to render.
 We create an array of rect elements and wrap them inside a g element.
 
 
-```javascript
+```html
 
 var Bar = React.createClass({
   getDefaultProps: function() {
@@ -196,7 +184,7 @@ Up until now we have the Bar component ready to render the Rect elements.
 The Rect class code is very straight forward actually, all we need to do is return the actual rect element with provided 
 properties.
 
-```javascript
+```html
 var Rect = React.createClass({
     getDefaultProps: function() {
         return {
@@ -226,7 +214,7 @@ var Rect = React.createClass({
 
 ```
 
-This was a proof and concept of replacing the original D3 chart rendering part with React.
+This was a proof of concept of replacing the original D3 chart rendering part with React.
 The code needs more refining obviously, including adding propTypes for example.
 
 One final aspect that needs covering is the transition part. We need a way to simulate the original D3 transitions when the data changes.
@@ -241,14 +229,14 @@ We will also use a simple mixin lifted from the [React documentation](https://fa
 that handles intervals and removing the intervals when the component is unmounted.
 
 Further more we will need to keep state of the current height and compare it with the via props defined height. 
-As long as current state height is not equals to the defined props height we will keep updating the state and triggering a re-rendering of the Rect component.
+As long as current state height is not equals to the defined props height we will keep updating the state, triggering a re-rendering of the Rect component a long the way.
 
 This approach enables us to create defined transitions. For smoothing out the transition we also added the _d3.ease_ method when calculating the
 height. This makes the transition more natural as opposed to a linear transformation.
 
 For the complete implementation check the code above.
 
-```javascript
+```html
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
@@ -326,6 +314,9 @@ Here is the final example including the code.
 This was an initial approach in combing D3 and React and taking control of the rendering process.
 The provided example doesn't cover any transitions where the number of Rect element changes. This can be easily achieved by
 adding x and width property calculations just like shown with the y and height properties.
+
+
+Thank you to [@thinkfunctional](https://twitter.com/thinkfunctional) for reading the draft and providing valuable feedback.
 
 ### Links
 
