@@ -311,7 +311,7 @@ Here is the final example including the code.
 
 ### Roundup
 
-This was an initial approach in combing D3 and React and taking control of the rendering process.
+This was an initial approach in combining D3 and React and taking control of the rendering process.
 The provided example doesn't cover any transitions where the number of Rect element changes. This can be easily achieved by
 adding x and width property calculations just like shown with the y and height properties.
 
