@@ -229,12 +229,12 @@ We will also use a simple mixin lifted from the [React documentation](https://fa
 that handles intervals and removing the intervals when the component is unmounted.
 
 Further more we will need to keep state of the current height and compare it with the via props defined height. 
-As long as current state height is not equals to the defined props height we will keep updating the state, triggering a re-rendering of the Rect component a long the way.
+As long as current state height is not equal to the defined props height we will keep updating the state, triggering a re-rendering of the Rect component a long the way.
 
 This approach enables us to create defined transitions. For smoothing out the transition we also added the _d3.ease_ method when calculating the
 height. This makes the transition more natural as opposed to a linear transformation.
 
-For the complete implementation check the code above.
+For the complete implementation check the code below.
 
 ```html
 var SetIntervalMixin = {
