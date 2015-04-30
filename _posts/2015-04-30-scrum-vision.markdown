@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scrum won't help you – if you lack the vision"
+title:  "Scrum Won't Help You – If You Lack The Vision"
 date:   2015-04-30 12:00:00
 tags:  agile, scrum, product, development
 published: true
