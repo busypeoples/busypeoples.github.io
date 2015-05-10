@@ -66,7 +66,7 @@ We probably don't, we might be adding more features than the customers will ever
 * Make sure their is a product owner that is dedicated to keeping the backlog up to date. If not, a Scrum Master might have 
 to push the product owner for dedicating time on the matter.
 
-* Stop adding every feature straight to the backlog. There a features that should be written down, others might be 
+* Stop adding every feature straight to the backlog. There are features that should be written down, others might be 
 quick or random ideas or simply cool side features that might not make sense tomorrow. Maybe iterate on an idea before adding it to the backlog.
 
 * Stop adding full fledged stories disguised as improvements, this leads to even more confusion and bloats the backlog. 
