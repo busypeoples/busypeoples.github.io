@@ -31,22 +31,23 @@ The hardships of dealing with large product backlogs is that they work against t
 the overall vision. Just imagine having to keep an overview of a hundred or so features locked in a backlog. First this is hard to 
 maintain from a product owner point of view, where more and more features are being added to the log but only a couple of features being implemented on every iteration.
 This would mean the log is getting bigger on every cycle in a worst case scenario. Secondly, the more stories the more time the team has to invest in staying up to date on what is in the pipeline.
-Obviously this makes no sense. We are adding stories that will probably never end up getting implemented, only adding distraction to what we really need to 
+Obviously this makes no sense. We are adding stories that will probably never end up getting implemented, distracting from what we really need to 
 focus on.
 
 _"Adding an idea or a potential awesome feature to the backlog is way easier than designing, building, delivering, marketing & maintaining it."_
 _[Thomas Schranz / Blossom](https://medium.com/product-love/the-scrum-backlog-is-where-features-go-to-die-b1336ff707aa)_
 
 ### Less Is More
-Identify which features and stories should be removed from the backlog. 
-This is like the aforementioned developer example, the product owner must validate the existing stories and remove
-any unnecessary features. Preferably by consulting and discussing those backlog items with the team. 
-The important part here is to tackle the problem from the start, meaning quickly validate any newly added stories.
-Best case would be to always validate all the stories, otherwise this will quickly turn into hording features without really evaluating the value they add to the product.
 
 Managing the backlog can quickly become nearly impossible or counterproductive. 
 We want to avoid this scenario early on.
 Grooming out of control backlogs will either come with large costs or will at some point be fully neglected, rendering the benefits obsolete.
+
+Identify which features and stories should be removed from the backlog. 
+The product owner must validate the existing stories and remove
+any unnecessary features. Preferably by consulting and discussing those backlog items with the team. 
+The important part here is to tackle the problem from the start, meaning quickly validate any newly added stories.
+Best case would be to always validate all the stories, otherwise this will quickly turn into hording features without really evaluating the value they add to the product.
 
 Another important aspect to keep in mind is that there is a huge difference between adding a story to a backlog with twenty as compared to a backlog
 of hundreds or even thousands of items. 
