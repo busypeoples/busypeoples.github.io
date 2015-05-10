@@ -20,12 +20,12 @@ just because we expect experienced and productive developers to follow the DRY c
  
 _* Well, yes there are companies that use Lines Of Code as a metric for efficiency, but then these companies might also have other pending issues, which means we can ignore them for now._
 
-The backlog seems to encourage non reflective feature adding, everything gets dumped in there, a bunch of high priority features, distracting stories, bugs, improvements etc. 
+The backlog seems to encourage non reflective feature adding, everything gets dumped in there, a bunch of high priority features, side stories, bugs, improvements etc. 
 You might get the feeling that resource and time are not a constraint here. 
 I have read theories encouraging the development team to add features, leaving the product owner to prioritize them. 
 In general the idea sounds perfectly reasonable, as the team should normally have strong insights into the product.
-The problem is that we want to build a concise and minimum viable product. Everyone adding every possible feature that comes to mind 
-into the mix will probably lead to the contrary, if the backlog is not maintained properly.
+But everyone adding every possible feature that comes to mind 
+into the mix will probably lead to the contrary - if the backlog is not maintained properly.
 
 The hardships of dealing with large product backlogs is that they work against the idea of a minimum viable product, because they quickly start distracting from
 the overall vision. Just imagine having to keep an overview of a hundred or so features locked in a backlog. First this is hard to 
