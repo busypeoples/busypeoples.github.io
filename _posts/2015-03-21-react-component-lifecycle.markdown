@@ -8,14 +8,13 @@ published: true
 
 ### Introduction
 
-**React** enables to create components by invoking the React.createClass() method which expects a _render_ method and triggers 
-a lifecycle that can be hooked into via a number of so called lifecycle methods.
+**React** lets you create components by invoking the `React.createClass()` method which expects a `render` method and triggers a _lifecycle_ that can be hooked into via a number of so called lifecycle methods.
 
-This short article should shed light into all the applicable functions.
+This short article should shed light on all the applicable functions.
 
 Understanding the component lifecycle will enable you to perform certain actions when a component is created or destroyed.
-Further more it gives you the opportunity to decide if a component should be updated in the first place and to react to 
-props or state changes accordingly.
+Furthermore, it gives you the opportunity to decide if a component should be updated in the first place, and to react to 
+_props_ or _state_ changes accordingly.
 
 ### The Lifecycle
 
@@ -26,7 +25,7 @@ where the component is created, and state and props changes triggered **updates*
 
 <img src="../../img/lifecycle_init.png" width="600px" alt="Initialization Lifecycle" title="Initialization Lifecycle">
 
-From looking at the image above we can see that the first two methods being called are _getDefaultProps_ and _getInitialState_.
+From looking at the table above we can see that the first two methods being called are `getDefaultProps` and `getInitialState`.
 Both methods are only called once when initially rendering the component.
 
 The **_getInitialState_** method enables to set the initial state value, that is accessible inside the component via *this.state*.
